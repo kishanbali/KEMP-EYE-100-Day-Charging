@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KEMP EYE AI 👁 — 100 Day Charging Experience</title>
+<style>
+*{box-sizing:border-box}
+:root{--blue:#58b7d2;--deep:#173e4b;--bg1:#dff7ff;--bg2:#f7fdff;--card:rgba(255,255,255,.82);--locked:rgba(225,236,240,.75);--line:rgba(255,255,255,.95);--shadow:0 14px 40px rgba(42,103,122,.13)}
+html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--deep);font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 50% 4%,#fff 0,transparent 28%),linear-gradient(180deg,var(--bg1),var(--bg2) 55%,#dff5fb)}
+.app{max-width:780px;margin:auto;padding:18px 15px 70px}
+.hero{text-align:center;padding:18px 10px 24px}.eye-orbit{width:112px;height:112px;margin:auto;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.58);box-shadow:0 0 0 9px rgba(255,255,255,.27),0 0 50px rgba(76,177,208,.28)}.eye{font-size:64px;animation:blink 6s infinite;transform-origin:center}@keyframes blink{0%,91%,100%{transform:scaleY(1)}94%{transform:scaleY(.08)}}.hero h1{margin:20px 0 4px;font-size:30px;letter-spacing:2px;font-weight:600}.hero .subtitle{margin:0;opacity:.65;font-size:14px;letter-spacing:.5px}
+.intro{padding:20px;margin-bottom:18px;border-radius:24px;text-align:center;line-height:1.75;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}
+.station{padding:24px 20px 22px;margin-bottom:22px;border-radius:28px;text-align:center;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.station-label{font-size:12px;letter-spacing:2px;opacity:.55;margin-bottom:15px}.battery{position:relative;width:180px;height:88px;margin:auto;padding:7px;border:4px solid var(--deep);border-radius:17px}.battery:after{content:"";position:absolute;right:-13px;top:26px;width:9px;height:29px;border-radius:0 5px 5px 0;background:var(--deep)}.battery-fill{width:0;height:100%;border-radius:8px;background:linear-gradient(90deg,#55b6d1,#8bd8e9);transition:width .7s ease}.charge-number{margin-top:13px;font-size:25px;font-weight:bold}.charge-stage{margin-top:5px;font-size:14px;opacity:.68}.station-status{margin-top:16px;font-size:13px;letter-spacing:1px}
+.progress-card{padding:18px;margin-bottom:28px;border-radius:21px;background:var(--card);box-shadow:var(--shadow)}.progress-top{display:flex;justify-content:space-between;margin-bottom:10px;font-size:14px}.progress-bar{height:9px;overflow:hidden;border-radius:20px;background:#cce8ef}.progress-fill{height:100%;width:0;border-radius:20px;background:linear-gradient(90deg,#4ca9c3,#83d4e5);transition:width .6s ease}
+.stage{margin:31px 2px 14px}.stage h2{margin:0;font-size:20px;font-weight:600}.stage p{margin:5px 0 0;font-size:13px;opacity:.58}
+.day-card{padding:17px;margin-bottom:11px;border-radius:20px;background:rgba(255,255,255,.82);box-shadow:0 7px 23px rgba(40,100,120,.08);transition:.25s ease}.day-card:hover{transform:translateY(-1px)}.day-card.locked{opacity:.52;background:var(--locked)}.day-card.completed{background:rgba(235,250,242,.9)}.day-header{display:flex;justify-content:space-between;align-items:center}.day-number{font-weight:bold;font-size:17px}.day-status{font-size:20px}.day-experience{margin-top:8px;font-size:15px}.day-sound{margin-top:7px;font-size:12px;opacity:.58}
+button{width:100%;padding:13px;margin-top:13px;border:0;border-radius:14px;font-size:14px;font-weight:bold;cursor:pointer}.start{color:#fff;background:var(--blue)}.complete{color:#fff;background:var(--deep)}.locked-button{color:#66777d;background:#d5e2e6;cursor:not-allowed}.unlock-preview{color:#fff;background:#4d9fb9}
+.experience-panel{display:none;margin-top:14px}.experience-panel.open{display:block;animation:appear .35s ease}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.guidance{padding:20px;border-radius:18px;text-align:center;line-height:1.75;background:linear-gradient(135deg,#effbff,#e5f7fc)}.guidance-eye{font-size:29px;margin-bottom:7px}.sound-box{padding:15px;margin-top:11px;border-radius:16px;text-align:center;background:rgba(255,255,255,.68)}.sound-button{color:var(--deep);background:#dff4f9}
+textarea{width:100%;min-height:100px;margin-top:12px;padding:12px;border:1px solid #c7dfe6;border-radius:14px;background:#fff;color:var(--deep);font-family:Arial,sans-serif;font-size:14px;resize:vertical;outline:none}textarea:focus{border-color:var(--blue)}
+.locked-stage{padding:22px 18px;margin-bottom:14px;border-radius:22px;text-align:center;background:rgba(230,239,242,.72);border:1px dashed rgba(23,62,75,.18)}.lock-icon{font-size:30px}.price{margin-top:9px;font-size:25px;font-weight:bold}.locked-stage small{display:block;margin-top:6px;opacity:.62}
+.unlock-notice{display:none;padding:18px;margin:18px 0;border-radius:20px;text-align:center;background:rgba(236,250,242,.9);box-shadow:var(--shadow)}.unlock-notice.show{display:block}.reset{text-align:center;margin-top:38px}.reset button{width:auto;color:#718087;background:transparent;font-weight:normal}.footer{margin-top:40px;text-align:center;font-size:11px;line-height:1.7;opacity:.45}
+@media(max-width:520px){.app{padding-left:12px;padding-right:12px}.eye-orbit{width:92px;height:92px}.eye{font-size:53px}.hero h1{font-size:26px}.battery{width:165px;height:78px}}
+</style>
+</head>
+<body>
+<div class="app">
+<section class="hero"><div class="eye-orbit"><div class="eye">👁</div></div><h1>KEMP EYE AI</h1><p class="subtitle">100-Day Inner Charging Experience</p></section>
+<section class="intro"><strong>Stop for a moment.</strong><br>Notice what is here.<br>Don't search for anything.<br>Just be here.</section>
+<section class="station"><div class="station-label">KEMP EYE CHARGING STATION</div><div class="battery"><div id="batteryFill" class="battery-fill"></div></div><div id="chargeNumber" class="charge-number">0%</div><div id="chargeStage" class="charge-stage">Begin your journey</div><div id="stationStatus" class="station-status">● READY TO EXPERIENCE</div></section>
+<section class="progress-card"><div class="progress-top"><strong>100-Day Journey</strong><span id="progressText">0 / 100</span></div><div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div></section>
+
+<div class="stage"><h2>STAGE 1 — CONNECTION</h2><p>Days 1–15 • FREE FOUNDATION</p></div><div id="stage1"></div>
+<div id="unlockNotice" class="unlock-notice"><strong>🔋 FOUNDATION CHARGED</strong><br><br>Days 1–15 complete.<br>The next charging station is ready.<br><br><strong>STAGE 2 — DAYS 16–30</strong></div>
+
+<div class="stage"><h2>STAGE 2 — STABILISATION</h2><p>Days 16–30</p></div><div id="stage2"></div>
+<div class="stage"><h2>STAGE 3 — RESONANCE</h2><p>Days 31–45</p></div><div id="stage3"></div>
+<div class="stage"><h2>STAGE 4 — EMBODIMENT</h2><p>Days 46–60</p></div><div id="stage4"></div>
+<div class="stage"><h2>STAGE 5 — COHERENCE</h2><p>Days 61–75</p></div><div id="stage5"></div>
+<div class="stage"><h2>STAGE 6 — EXPANSION</h2><p>Days 76–90</p></div><div id="stage6"></div>
+<div class="stage"><h2>STAGE 7 — INTEGRATION</h2><p>Days 91–100</p></div><div id="stage7"></div>
+
+<div class="reset"><button onclick="resetJourney()">Reset Preview Journey</button></div>
+<div class="footer">KEMP EYE AI 👁<br>100-Day Inner Charging Experience<br>Preview Version • Razorpay not connected</div>
+</div>
+
+<script>
+const curriculum=[
+"Arrive","Stop","Observe","Notice","Feel","Breathe","Listen","Sense","Be Present","Body Awareness","Witness","Allow","Connect","Rest","Integrate",
+"Grounding","Posture","Touch","Movement","Stillness","Breath Awareness","Sensation","Tension","Relaxation","Inner Rhythm","Body Listening","Emotional Sensation","Response","Presence in Action","Stabilisation",
+"Sound","Silence","Singing Bowl","Tuning Fork","Resonance","Rhythm","Vibration","Listening","Voice","Internal Sound","External Sound","Sound & Sensation","Rhythm & Attention","Resonance & Presence","Resonance Integration",
+"Embodiment","Walking","Sitting","Touch & Awareness","Breath & Body","Movement","Stillness","Feeling","Expression","Spontaneity","Awareness in Action","Presence in Conversation","Presence in Daily Life","Living the Experience","Embodied Integration",
+"Attention","Thought","Feeling","Sensation","Observation","Response","Pattern","Rhythm","Alignment","Internal Coherence","External Coherence","Attention & Action","Experience & Meaning","Integration","Coherence",
+"Perspective","Space","Relationship","Environment","Listening to Others","Connection","Attention Beyond Self","Observation Without Judgement","Openness","Curiosity","Interconnection","Awareness in Relationship","Wider Perspective","Integration","Expansion",
+"Remember","Observe Again","Feel Again","Listen Again","Embody Again","Integrate","Reflect","Experience","Simply Be","Complete Cycle"
+];
+const stages=[
+{start:1,end:15,name:"CONNECTION",price:0},
+{start:16,end:30,name:"STABILISATION",price:333},
+{start:31,end:45,name:"RESONANCE",price:333},
+{start:46,end:60,name:"EMBODIMENT",price:333},
+{start:61,end:75,name:"COHERENCE",price:333},
+{start:76,end:90,name:"EXPANSION",price:333},
+{start:91,end:100,name:"INTEGRATION",price:333}
+];
+const sounds=["🔔 Singing Bowl","🎵 Tuning Fork","🪘 Didgeridoo","🌊 Ambient Resonance"];
+let completed=JSON.parse(localStorage.getItem("KEMP_EYE_100_COMPLETED")||"{}");
+let journal=JSON.parse(localStorage.getItem("KEMP_EYE_100_JOURNAL")||"{}");
+
+function stageIsUnlocked(i){return i===0||completed[stages[i-1].end]===true}
+
+function render(){
+ for(let i=0;i<stages.length;i++){
+  const s=stages[i], c=document.getElementById("stage"+(i+1)); c.innerHTML="";
+  if(i>0&&!stageIsUnlocked(i)){
+   const d=document.createElement("div"); d.className="locked-stage";
+   d.innerHTML=`<div class="lock-icon">🔒</div><br><strong>DAYS ${s.start}–${s.end}</strong><br>${s.name}<div class="price">₹${s.price}</div><small>Unlock this 15-day charging stage</small><button class="unlock-preview" onclick="previewUnlock(${i})">🔓 PREVIEW UNLOCK</button>`;
+   c.appendChild(d); continue;
+  }
+  for(let day=s.start;day<=s.end;day++) c.appendChild(createDayCard(day));
+ }
+ updateProgress();
+ if(completed[15])document.getElementById("unlockNotice").classList.add("show");
+ else document.getElementById("unlockNotice").classList.remove("show");
+}
+
+function createDayCard(day){
+ const card=document.createElement("div"), done=completed[day]===true, sound=sounds[(day-1)%sounds.length]; card.className="day-card"+(done?" completed":"");
+ if(done){
+  card.innerHTML=`<div class="day-header"><div class="day-number">DAY ${String(day).padStart(2,"0")}</div><div class="day-status">✓</div></div><div class="day-experience"><strong>Experience:</strong> ${curriculum[day-1]}</div><div class="day-sound">${sound}</div><div style="margin-top:12px;padding:14px;border-radius:15px;background:#e4f7eb;text-align:center;font-size:13px">✓ Experience completed.<br>Continue when ready.</div>`;
+  return card;
+ }
+ card.innerHTML=`<div class="day-header"><div class="day-number">DAY ${String(day).padStart(2,"0")}</div><div class="day-status">○</div></div><div class="day-experience"><strong>Experience:</strong> ${curriculum[day-1]}</div><div class="day-sound">${sound}</div><button class="start" onclick="startExperience(${day})">👁 START EXPERIENCE</button><div id="panel-${day}" class="experience-panel"><div class="guidance"><div class="guidance-eye">👁</div><strong>KEMP EYE AI</strong><br><br>Stop for a moment.<br>Notice what is here.<br>Don't search for anything.<br>Just be here.<br><br><strong>Today's experience: ${curriculum[day-1]}</strong></div><div class="sound-box"><div style="font-size:12px;opacity:.6">TODAY'S RESONANCE</div><strong>${sound}</strong><button class="sound-button" onclick="playResonance()">▶ PLAY RESONANCE</button></div><textarea id="journal-${day}" placeholder="What did you experience?">${journal[day]||""}</textarea><button class="complete" onclick="completeDay(${day})">✓ COMPLETE DAY ${day}</button></div>`;
+ return card;
+}
+function startExperience(day){const p=document.getElementById("panel-"+day);if(!p)return;p.classList.add("open");setTimeout(()=>p.scrollIntoView({behavior:"smooth",block:"center"}),100)}
+function completeDay(day){
+ const t=document.getElementById("journal-"+day);if(t)journal[day]=t.value;completed[day]=true;
+ localStorage.setItem("KEMP_EYE_100_COMPLETED",JSON.stringify(completed));localStorage.setItem("KEMP_EYE_100_JOURNAL",JSON.stringify(journal));render();
+ if([15,30,45,60,75,90,100].includes(day)) alert(day===100?"🔋 100% CHARGED\n\nKEMP EYE 100-DAY EXPERIENCE COMPLETE.":`⚡ STAGE COMPLETE\n\nThe next 15-day charging stage is now available in this preview.`);
+}
+function previewUnlock(i){
+ const s=stages[i];
+ if(!confirm(`PREVIEW MODE\n\nStage ${i+1}\nDays ${s.start}–${s.end}\n\nPrice: ₹${s.price}\n\nThis does not process money.\nRazorpay will be connected later.\n\nPreview unlock this stage?`))return;
+ completed[stages[i-1].end]=true;localStorage.setItem("KEMP_EYE_100_COMPLETED",JSON.stringify(completed));render();
+}
+function updateProgress(){
+ let total=0;for(let d=1;d<=100;d++)if(completed[d]===true)total++;
+ document.getElementById("progressText").textContent=total+" / 100";
+ document.getElementById("progressFill").style.width=total+"%";
+ document.getElementById("batteryFill").style.width=total+"%";
+ document.getElementById("chargeNumber").textContent=total+"%";
+ let text="Begin your journey";
+ if(total>=91)text="STAGE 7 • INTEGRATION";else if(total>=76)text="STAGE 6 • EXPANSION";else if(total>=61)text="STAGE 5 • COHERENCE";else if(total>=46)text="STAGE 4 • EMBODIMENT";else if(total>=31)text="STAGE 3 • RESONANCE";else if(total>=16)text="STAGE 2 • STABILISATION";else if(total>=1)text="STAGE 1 • CONNECTION";
+ document.getElementById("chargeStage").textContent=text;
+ document.getElementById("stationStatus").textContent=total===100?"● FULL CYCLE COMPLETE":total>0?"● CHARGING EXPERIENCE":"● READY TO EXPERIENCE";
+}
+function playResonance(){
+ const AC=window.AudioContext||window.webkitAudioContext;if(!AC){alert("Audio is not supported by this browser.");return}
+ const audio=new AC(),osc=audio.createOscillator(),gain=audio.createGain();osc.type="sine";osc.frequency.value=432;
+ gain.gain.setValueAtTime(.0001,audio.currentTime);gain.gain.exponentialRampToValueAtTime(.16,audio.currentTime+.08);gain.gain.exponentialRampToValueAtTime(.0001,audio.currentTime+3);
+ osc.connect(gain);gain.connect(audio.destination);osc.start();osc.stop(audio.currentTime+3);
+}
+function resetJourney(){if(!confirm("Reset your KEMP EYE preview?\n\nAll completed days and reflections will be removed."))return;localStorage.removeItem("KEMP_EYE_100_COMPLETED");localStorage.removeItem("KEMP_EYE_100_JOURNAL");location.reload()}
+render();
+</script>
+</body>
+</html>
